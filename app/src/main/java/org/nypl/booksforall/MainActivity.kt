@@ -16,6 +16,8 @@ class MainActivity : AppCompatActivity() {
 
         NewRelic.withApplicationToken("AA970ef9af78594c87083ddd85e35f8e34e299cbef-NRMA")
             .withLogLevel(AgentLog.AUDIT)
+            .usingCollectorAddress("gov-mobile-collector.newrelic.com")
+            .usingCrashCollectorAddress("gov-mobile-crash.newrelic.com")
             .start(this.application)
         NewRelic.setUserId("malcolm")
 
